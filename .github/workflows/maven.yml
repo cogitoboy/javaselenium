@@ -27,8 +27,9 @@ jobs:
         java-version: '20'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven
+    - name: Config Maven Wrapper
       run: chmod a+x /home/runner/work/javaselenium/javaselenium/
+    - name: Build with Maven
       run: /home/runner/work/javaselenium/javaselenium/mvnw --version
 
   
