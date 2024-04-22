@@ -28,6 +28,6 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: /home/runner/work/javaselenium/javaselenium/mvnnw --version
+      run: ls -al| /home/runner/work/javaselenium/mvnnw --version
 
   
