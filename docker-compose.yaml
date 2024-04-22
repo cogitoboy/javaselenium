@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  test-auto:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - HOST_NAME=selenium-chrome
+    stdin_open: true
+    command: ["/bin/bash"]
+
+  selenium-chrome:
+    image: selenium/standalone-chrome:latest
+    ports:
+      - "4444:4444"
+      - "7900:7900"
+    shm_size: 2gb
